@@ -8,10 +8,12 @@
 import SwiftUI
 import GoogleMobileAds
 
-var best_score = Foundation.UserDefaults.standard.integer(forKey: "best_score")
+class ScoreObject: ObservableObject {
+    @Published var best_score = Foundation.UserDefaults.standard.integer(forKey: "best_score")
+}
 
 struct ContentView: View {
-//    @State var best_score: Int = Foundation.UserDefaults.standard.integer(forKey: "best_score")
+    @StateObject var score_obj = ScoreObject()
     @State var isActive: Bool = false
     
     var body: some View {
@@ -22,7 +24,7 @@ struct ContentView: View {
                         Spacer()
                         VStack{
                             Spacer().frame(height:24)
-                            Text("Your Best Score : \(best_score)").foregroundColor(Color(hex: 0x50514F)).font(.system(size: 28, weight: .heavy, design: .rounded)).padding(6).scaledToFill()
+                            Text("Your Best Score : \(score_obj.best_score)").foregroundColor(Color(hex: 0x50514F)).font(.system(size: 28, weight: .heavy, design: .rounded)).padding(6).scaledToFill()
                             Spacer()
                         }
                         Spacer().frame(width:3)
@@ -39,19 +41,6 @@ struct ContentView: View {
                             ) {
                                 Text("PUNCH").font(.system(size: 42, weight: .heavy, design: .rounded)).scaledToFill()
                             }.isDetailLink(false).buttonStyle(RoundedRectangleButtonStyle()).scaledToFill()
-                            
-//                            Button(action: {
-//                                best_score = Int(floor(555.5))
-//                                Foundation.UserDefaults.standard.set(555.5, forKey: "best_score")
-//                            }) {
-//                                Text("START 555.5")
-//                            }
-//                            Button(action: {
-//                                best_score = Int(floor(3.33))
-//                                Foundation.UserDefaults.standard.set(3.33, forKey: "best_score")
-//                            }) {
-//                                Text("START 3.33")
-//                            }
                             Spacer()
                         }
                     }
@@ -65,7 +54,7 @@ struct ContentView: View {
                     }
                 }
             ).navigationBarHidden(true)
-        }
+        }.environmentObject(score_obj)
     }
 }
 

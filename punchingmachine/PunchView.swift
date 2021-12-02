@@ -9,9 +9,10 @@ import SwiftUI
 import GoogleMobileAds
 
 struct PunchView: View {
+    @EnvironmentObject var score_obj: ScoreObject
     @Binding var rootIsActive : Bool
-    @ObservedObject var sensor = MotionSensor()
-    @State var timeRemaining = 4
+    @State var sensor = MotionSensor()
+    @State var timeRemaining = 5
     @State var degress = -90.0
     @State var showScoreView = false
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
@@ -21,49 +22,28 @@ struct PunchView: View {
             EmptyView()
         })
             .onAppear {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
                     self.showScoreView.toggle()
                 }
             }
         Color(hex: 0xFDFFF7).ignoresSafeArea().overlay(
             ZStack{
-                //            VStack {
-                //                Text("Score : \(self.sensor.punch_score)")
-                //                Text(sensor.xStr)
-                //                Text(sensor.yStr)
-                //                Text(sensor.zStr)
-                //                Button(action: {
-                //                    self.sensor.isStarted ? self.sensor.stop() : self.sensor.start()
-                //                    Foundation.UserDefaults.standard.set(99, forKey: "best_score")
-                //                }) {
-                //                    self.sensor.isStarted ? Text("STOP") : Text("START")
-                //                }
-                //                Text("Time: \(max(0,timeRemaining-1))")
-                //                    .onReceive(timer) { _ in
-                //                        if timeRemaining > 0 {
-                //                            timeRemaining -= 1
-                //                        }
-                //                        if timeRemaining == 2 {
-                //                            self.sensor.start()
-                //                        }
-                //                        if timeRemaining == 0 {
-                //                            self.sensor.stop()
-                //                            self.sensor.score()
-                //                        }
-                //                    }
-                //            }
-                Text("\(max(0,timeRemaining-1))")
+                Text("\(max(0,timeRemaining-2))")
                     .foregroundColor(Color(hex: 0x50514F)).font(.system(size: 198, weight: .heavy, design: .rounded)).padding(6).scaledToFill()
                     .onReceive(timer) { _ in
                         if timeRemaining > 0 {
                             timeRemaining -= 1
                         }
-                        if timeRemaining == 2 {
+                        if timeRemaining == 3 {
                             self.sensor.start()
                         }
-                        if timeRemaining == 0 {
+                        if timeRemaining == 1 {
                             self.sensor.stop()
                             self.sensor.score()
+                            if self.sensor.punch_score > Foundation.UserDefaults.standard.double(forKey: "best_score") {
+                                score_obj.best_score = Int(round(self.sensor.punch_score))
+                                Foundation.UserDefaults.standard.set(round(self.sensor.punch_score), forKey: "best_score")
+                            }
                         }
                     }
                 Circle()

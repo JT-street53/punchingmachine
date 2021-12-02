@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreMotion
+import SwiftUI
 
 class MotionSensor: NSObject, ObservableObject {
     
@@ -47,10 +48,6 @@ class MotionSensor: NSObject, ObservableObject {
         let z2 = self.accelz.map { pow($0, 2) / 4 }
         let vector_xyz = zip(zip(x2,y2).map(+), z2).map(+)
         self.punch_score = zip(weigt_t, vector_xyz).map(*).reduce(0, +)
-        if self.punch_score > Foundation.UserDefaults.standard.double(forKey: "best_score") {
-            best_score = Int(round(self.punch_score))
-            Foundation.UserDefaults.standard.set(round(self.punch_score), forKey: "best_score")
-        }
     }
     
     private func updateMotionData(deviceMotion:CMDeviceMotion) {
