@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7CAB54D1E550FF16458E9F23 /* Pods_punchingmachine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0FF3D10B38418B3762AC12D /* Pods_punchingmachine.framework */; };
+		BD55D8D1275846FB004A888A /* BannerAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD55D8D0275846FB004A888A /* BannerAdViewController.swift */; };
+		BD55D8D32758471B004A888A /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD55D8D22758471B004A888A /* ScoreView.swift */; };
+		BD55D8D527584736004A888A /* PunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD55D8D427584736004A888A /* PunchView.swift */; };
+		BD55D8D727584755004A888A /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD55D8D627584755004A888A /* Styles.swift */; };
+		BD55D8D927584777004A888A /* MotionSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD55D8D827584777004A888A /* MotionSensor.swift */; };
 		BD91E0E727584452000CC959 /* punchingmachineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD91E0E627584452000CC959 /* punchingmachineApp.swift */; };
 		BD91E0E927584452000CC959 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD91E0E827584452000CC959 /* ContentView.swift */; };
 		BD91E0EB27584455000CC959 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD91E0EA27584455000CC959 /* Assets.xcassets */; };
@@ -14,11 +20,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F8AF24BEFE30634371E10A0 /* Pods-punchingmachine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-punchingmachine.debug.xcconfig"; path = "Target Support Files/Pods-punchingmachine/Pods-punchingmachine.debug.xcconfig"; sourceTree = "<group>"; };
+		BD55D8CF2758464E004A888A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BD55D8D0275846FB004A888A /* BannerAdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdViewController.swift; sourceTree = "<group>"; };
+		BD55D8D22758471B004A888A /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
+		BD55D8D427584736004A888A /* PunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunchView.swift; sourceTree = "<group>"; };
+		BD55D8D627584755004A888A /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		BD55D8D827584777004A888A /* MotionSensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionSensor.swift; sourceTree = "<group>"; };
 		BD91E0E327584452000CC959 /* punchingmachine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = punchingmachine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD91E0E627584452000CC959 /* punchingmachineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = punchingmachineApp.swift; sourceTree = "<group>"; };
 		BD91E0E827584452000CC959 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BD91E0EA27584455000CC959 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD91E0ED27584455000CC959 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E0FF3D10B38418B3762AC12D /* Pods_punchingmachine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_punchingmachine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC3759F9D4914B836B293209 /* Pods-punchingmachine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-punchingmachine.release.xcconfig"; path = "Target Support Files/Pods-punchingmachine/Pods-punchingmachine.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CAB54D1E550FF16458E9F23 /* Pods_punchingmachine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21774FC889D067EEABD72C0E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E0FF3D10B38418B3762AC12D /* Pods_punchingmachine.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A6268E800ACF942FD65F7179 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5F8AF24BEFE30634371E10A0 /* Pods-punchingmachine.debug.xcconfig */,
+				EC3759F9D4914B836B293209 /* Pods-punchingmachine.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BD91E0DA27584452000CC959 = {
 			isa = PBXGroup;
 			children = (
 				BD91E0E527584452000CC959 /* punchingmachine */,
 				BD91E0E427584452000CC959 /* Products */,
+				A6268E800ACF942FD65F7179 /* Pods */,
+				21774FC889D067EEABD72C0E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,7 +86,13 @@
 		BD91E0E527584452000CC959 /* punchingmachine */ = {
 			isa = PBXGroup;
 			children = (
+				BD55D8CF2758464E004A888A /* Info.plist */,
 				BD91E0E627584452000CC959 /* punchingmachineApp.swift */,
+				BD55D8D0275846FB004A888A /* BannerAdViewController.swift */,
+				BD55D8D22758471B004A888A /* ScoreView.swift */,
+				BD55D8D427584736004A888A /* PunchView.swift */,
+				BD55D8D627584755004A888A /* Styles.swift */,
+				BD55D8D827584777004A888A /* MotionSensor.swift */,
 				BD91E0E827584452000CC959 /* ContentView.swift */,
 				BD91E0EA27584455000CC959 /* Assets.xcassets */,
 				BD91E0EC27584455000CC959 /* Preview Content */,
@@ -74,9 +115,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD91E0F127584455000CC959 /* Build configuration list for PBXNativeTarget "punchingmachine" */;
 			buildPhases = (
+				739906478C255802B645BB39 /* [CP] Check Pods Manifest.lock */,
 				BD91E0DF27584452000CC959 /* Sources */,
 				BD91E0E027584452000CC959 /* Frameworks */,
 				BD91E0E127584452000CC959 /* Resources */,
+				A4AB81A3837BF3701FC62C76 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,12 +175,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		739906478C255802B645BB39 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-punchingmachine-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4AB81A3837BF3701FC62C76 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-punchingmachine/Pods-punchingmachine-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-punchingmachine/Pods-punchingmachine-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-punchingmachine/Pods-punchingmachine-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BD91E0DF27584452000CC959 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				BD91E0E927584452000CC959 /* ContentView.swift in Sources */,
+				BD55D8D527584736004A888A /* PunchView.swift in Sources */,
+				BD55D8D927584777004A888A /* MotionSensor.swift in Sources */,
+				BD55D8D32758471B004A888A /* ScoreView.swift in Sources */,
+				BD55D8D727584755004A888A /* Styles.swift in Sources */,
+				BD55D8D1275846FB004A888A /* BannerAdViewController.swift in Sources */,
 				BD91E0E727584452000CC959 /* punchingmachineApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +353,7 @@
 		};
 		BD91E0F227584455000CC959 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F8AF24BEFE30634371E10A0 /* Pods-punchingmachine.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -272,11 +363,13 @@
 				DEVELOPMENT_TEAM = F763QVBUR9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = punchingmachine/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -292,6 +385,7 @@
 		};
 		BD91E0F327584455000CC959 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC3759F9D4914B836B293209 /* Pods-punchingmachine.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,11 +395,13 @@
 				DEVELOPMENT_TEAM = F763QVBUR9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = punchingmachine/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
