@@ -47,7 +47,8 @@ class MotionSensor: NSObject, ObservableObject {
         let y2 = self.accely.map { pow($0, 2) }
         let z2 = self.accelz.map { pow($0, 2) / 4 }
         let vector_xyz = zip(zip(x2,y2).map(+), z2).map(+)
-        self.punch_score = zip(weigt_t, vector_xyz).map(*).reduce(0, +)
+        self.punch_score = zip(weigt_t, vector_xyz).map(*).max() ?? 0
+        self.punch_score *= 2
     }
     
     private func updateMotionData(deviceMotion:CMDeviceMotion) {

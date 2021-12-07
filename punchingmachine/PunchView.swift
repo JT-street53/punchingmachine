@@ -28,7 +28,7 @@ struct PunchView: View {
             }
         Color(hex: 0xFDFFF7).ignoresSafeArea().overlay(
             ZStack{
-                Text("\(max(0,timeRemaining-2))")
+                Text("\((timeRemaining < 3) ? "GO" : String(timeRemaining-2))")
                     .foregroundColor(Color(hex: 0x50514F)).font(.system(size: 198, weight: .heavy, design: .rounded)).padding(6).scaledToFill()
                     .onReceive(timer) { _ in
                         if timeRemaining > 0 {
