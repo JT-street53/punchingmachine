@@ -54,7 +54,7 @@ struct ContentView: View {
                     }
                 }
             ).navigationBarHidden(true)
-        }.environmentObject(score_obj)
+        }.environmentObject(score_obj).navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
