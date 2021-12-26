@@ -24,7 +24,7 @@ struct ContentView: View {
                         Spacer()
                         VStack{
                             Spacer().frame(height:24)
-                            Text("Your Best Score : \(score_obj.best_score)").foregroundColor(Color(hex: 0x50514F)).font(.system(size: 28, weight: .heavy, design: .rounded)).padding(6).scaledToFill()
+                            Text("Best Score : \(score_obj.best_score)").foregroundColor(Color(hex: 0x50514F)).font(.system(size: 28, weight: .heavy, design: .rounded)).padding(6).scaledToFill()
                             Spacer()
                         }
                         Spacer().frame(width:3)
@@ -41,6 +41,7 @@ struct ContentView: View {
                             ) {
                                 Text("PUNCH").font(.system(size: 42, weight: .heavy, design: .rounded)).scaledToFill()
                             }.isDetailLink(false).buttonStyle(RoundedRectangleButtonStyle()).scaledToFill()
+                                Text("スマホを持って空中にパンチしよう！").font(.system(size: 12, weight: .medium, design: .rounded)).scaledToFill()
                             Spacer()
                         }
                     }
